@@ -1,0 +1,5 @@
+@use "../settings/variables" as v;
+
+.o-section {
+  padding-block: v.$header-height;
+}

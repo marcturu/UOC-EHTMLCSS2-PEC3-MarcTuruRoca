@@ -1,0 +1,9 @@
+@use "../settings/variables" as v;
+
+.u-visually-hidden {
+  display: none !important;
+}
+
+[id] {
+  scroll-margin-top: v.$header-height;
+}

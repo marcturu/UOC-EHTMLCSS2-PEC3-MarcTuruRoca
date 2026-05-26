@@ -1,0 +1,35 @@
+@use "../settings/variables" as v;
+
+html {
+  scroll-padding-top: v.$header-height;
+}
+
+body {
+  font-family: v.$font-secondary;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: v.$color-dark-fallback;
+  background-color: v.$color-light-fallback;
+  min-height: 100vh;
+}
+
+main {
+  padding-top: v.$header-height;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: v.$font-primary;
+}
+
+.btn-primary {
+  color: v.$color-light-fallback;
+}
+
+button {
+  color: v.$color-light-fallback;
+  transition: color 0.25s ease;
+
+  &:hover {
+    color: white;
+  }
+}

@@ -1,20 +1,47 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
+/* ----- Settings ----- */
+@use "settings/fonts";
+@use "settings/variables" as *;
 
-/**
- * Import dependencies
- */
+/* ----- Tools ----- */
+@use "tools/functions";
+
+/* ----- Dependencies ----- */
 @use "dependencies";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+/* ----- Generic & Elements ------ */
+@use "generic/reset";
+@use "elements/base";
 
+/* ----- Objects ----- */
+@use "objects/container";
+@use "objects/section";
+
+/* ----- Components ----- */
 @use "layouts/home";
 
-/**
- * Do NOT include anything else in this file!
- */
+/* Partials */
+//@use "components/partials/header";
+//@use "components/partials/footer";
+/* Home */
+//@use "components/home/hero-home";
+/* Speakers */
+//@use "components/speakers/cards-speakers";
+/* Blog */
+//@use "components/blog/hero-blog";
+//@use "components/blog/base-blog";
+//@use "components/blog/intro";
+//@use "components/blog/list";
+//@use "components/blog/blockquote";
+//@use "components/blog/figure";
+//@use "components/blog/reflection";
+//@use "components/blog/index-blog";
+/* Contact */
+//@use "components/contact/hero-contact";
+//@use "components/contact/section-contact";
+//@use "components/contact/cards-contact";
+//@use "components/contact/form";
+//@use "components/contact/map";
+//@use "components/contact/index-contact";
+
+/* ----- Utilities ----- */
+@use "utilities/helpers";

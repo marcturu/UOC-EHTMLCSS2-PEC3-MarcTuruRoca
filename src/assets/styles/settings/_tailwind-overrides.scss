@@ -1,0 +1,9 @@
+@use "../settings/variables" as v;
+@use "../tools/functions" as f;
+
+/* Tailwind custom properties */
+@theme {
+  --color-primary: #dc2626;
+  --font-sans: system-ui, sans-serif;
+  --spacing-96: 24rem;
+}
