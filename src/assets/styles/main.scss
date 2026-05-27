@@ -1,6 +1,7 @@
 /* ----- Settings ----- */
 @use "settings/fonts";
 @use "settings/variables" as *;
+@use "settings/tailwind-overrides";
 
 /* ----- Tools ----- */
 @use "tools/functions";
@@ -23,7 +24,7 @@
 //@use "components/partials/header";
 //@use "components/partials/footer";
 /* Home */
-//@use "components/home/hero-home";
+@use "components/home/hero-home";
 /* Speakers */
 //@use "components/speakers/cards-speakers";
 /* Blog */

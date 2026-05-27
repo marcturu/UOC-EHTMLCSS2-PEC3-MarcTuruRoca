@@ -1,9 +1,9 @@
 @use "../settings/variables" as v;
-@use "../tools/functions" as f;
 
 /* Tailwind custom properties */
 @theme {
-  --color-primary: #dc2626;
-  --font-sans: system-ui, sans-serif;
-  --spacing-96: 24rem;
+  --color-primary: #{v.$color-primary};
+  --color-primary-hover: #{v.$color-primary-hover};
+  --color-secondary: #{v.$color-secondary};
+  --color-secondary-hover: #{v.$color-secondary-hover};
 }
