@@ -1,13 +1,15 @@
 /* ----- Settings ----- */
 @use "settings/fonts";
 @use "settings/variables" as *;
-@use "settings/tailwind-overrides";
 
 /* ----- Tools ----- */
 @use "tools/functions";
 
 /* ----- Dependencies ----- */
 @use "dependencies";
+
+/* ----- Settings (TCSS overrides) ----- */
+@use "settings/tailwind-overrides";
 
 /* ----- Generic & Elements ------ */
 @use "generic/reset";
