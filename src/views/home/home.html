@@ -1,0 +1,46 @@
+<section class="relative overflow-hidden">
+  <picture>
+    <!-- Desktop (>= 768px) -->
+    <source
+      media="(min-width: 768px)"
+      srcset="
+        ./assets/images/home/hero.jpg?width=1200&as=webp 1200w,
+        ./assets/images/home/hero.jpg?width=1600&as=webp 1600w,
+        ./assets/images/home/hero.jpg?width=1920&as=webp 1920w
+      "
+      sizes="100vw"
+    />
+
+    <!-- Mobile default -->
+    <img
+      class="h-vh w-full object-cover"
+      src="./assets/images/home/hero-mobile.jpg?width=900&as=webp"
+      srcset="
+        ./assets/images/home/hero-mobile.jpg?width=900&as=webp 900w,
+        ./assets/images/home/hero-mobile.jpg?width=1200&as=webp 1200w
+      "
+      alt=""
+      width="900"
+      height="1200"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
+
+  <a
+    href=""
+    class="
+      hero-btn hero-btn--primary absolute
+      left-[50%] top-[37%] md:left-[27.5%] md:top-[87%] -translate-x-1/2 -translate-y-1/2
+      scale-[0.45]
+      sm:scale-[0.80]
+      md:scale-75
+      lg:scale-100
+      xl:scale-125
+      2xl:scale-150
+    "
+  >
+    MÁS INFORMACIÓN
+    <i class="fa-solid fa-arrow-right text-[0.8em]"></i>
+  </a>
+</section>
