@@ -35,14 +35,14 @@
       <!-- Navbar (links) -->
       <nav class="hidden fixed left-5 right-5 top-[110px] z-[99]
         md:block md:w-auto md:static md:bg-transparent md:border-0 md:shadow-none md:p-0 md:mt-0
-        bg-light border border-border rounded-md shadow-lg p-4" id="navbar-dropdown" aria-label="Navegación principal">
-        <ul class="flex flex-col md:flex-row gap-4 md:gap-8">
+        bg-white border border-border rounded-md shadow-lg p-4" id="navbar-dropdown" aria-label="Navegación principal">
+        <ul class="flex flex-col md:flex-row gap-2 md:gap-8 md:p-0">
           <li>
-            <a href="./index" class="block text-secondary rounded md:bg-transparent hover:text-primary md:p-0">Inicio</a>
+            <a href="./index" class="block text-secondary rounded md:bg-transparent hover:text-primary hover:bg-light md:hover:bg-transparent p-1 md:p-0">Inicio</a>
           </li>
 
-          <li class="relative">
-            <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between text-secondary md:border-0 cursor-pointer gap-1">
+          <li class="relative hover:bg-light md:hover:bg-transparent">
+            <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between text-secondary md:border-0 cursor-pointer p-1 md:p-0 gap-1 ">
               Ponentes
               <i class="fa-solid fa-caret-down"></i>
             </button>
@@ -79,10 +79,10 @@
           </li>
 
           <li>
-            <a href="./blog" class="block text-secondary rounded md:border-0 hover:text-primary md:p-0 md:dark:hover:bg-transparent">Blog</a>
+            <a href="./blog" class="block text-secondary rounded md:border-0 hover:text-primary hover:bg-light md:hover:bg-transparent p-1 md:p-0">Blog</a>
           </li>
           <li>
-            <a href="./contact" class="block text-secondary rounded md:border-0 hover:text-primary md:p-0 md:dark:hover:bg-transparent">Contacto</a>
+            <a href="./contact" class="block text-secondary rounded md:border-0 hover:text-primary hover:bg-light md:hover:bg-transparent p-1 md:p-0">Contacto</a>
           </li>
         </ul>
       </nav>

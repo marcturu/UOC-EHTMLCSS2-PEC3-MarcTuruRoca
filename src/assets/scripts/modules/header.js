@@ -12,6 +12,7 @@ function normalizePath(path) {
   return path || '/';
 }
 
+// Set active link in the navbar
 function setActiveNav() {
   const currentPath = normalizePath(window.location.pathname);
   const dropdownButton = document.getElementById('dropdownNavbarButton');
@@ -46,6 +47,7 @@ function setActiveNav() {
   dropdownButton.classList.toggle('text-secondary', !isSpeakerSection);
 }
 
+//
 function toggleDropdown() {
     const btn = document.querySelector('[data-dropdown-toggle]');
     const menu = document.getElementById('dropdownNavbar');
@@ -57,9 +59,11 @@ function toggleDropdown() {
     });
 }
 
+// Close the dropdown when a link is clicked
 function initDropdownAutoclose() {
+  const dropdownButton = document.getElementById('dropdownNavbarButton');
   const menu = document.getElementById('dropdownNavbar');
-  if (!menu) return;
+  if (!dropdownButton || !menu) return;
 
   // Close when clicking any link from the dropdown
   document.querySelectorAll('#dropdownNavbar a').forEach(link => {
@@ -68,12 +72,18 @@ function initDropdownAutoclose() {
     });
   });
 
+  // Close when clicking outside the dropdown
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !dropdownButton.contains(e.target)) menu.classList.add('hidden');
+  });
+
   // Close when the hash changes (#name1 -> #name2)
   window.addEventListener('hashchange', () => {
     menu.classList.add('hidden');
   });
 }
 
+// Add border to header on scroll
 function borderOnScroll() {
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
