@@ -20,13 +20,8 @@
 @use "objects/section";
 
 /* ----- Components ----- */
-@use "layouts/home";
-
-/* Partials */
-//@use "components/partials/header";
-//@use "components/partials/footer";
-/* Home */
-@use "components/home/hero-home";
+@use "components/buttons";
+@use "components/links";
 /* Speakers */
 //@use "components/speakers/cards-speakers";
 /* Blog */
