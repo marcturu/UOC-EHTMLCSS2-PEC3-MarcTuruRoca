@@ -2,6 +2,8 @@ export function initHeader() {
   setActiveNav();
   toggleDropdown();
   initDropdownAutoclose();
+  toggleMenu();
+  borderOnScroll();
 }
 
 function normalizePath(path) {
@@ -69,5 +71,23 @@ function initDropdownAutoclose() {
   // Close when the hash changes (#name1 -> #name2)
   window.addEventListener('hashchange', () => {
     menu.classList.add('hidden');
+  });
+}
+
+function borderOnScroll() {
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('border-b', window.scrollY > 0);
+  });
+}
+
+function toggleMenu() {
+  const toggleBtn = document.querySelector('[data-collapse-toggle="navbar-dropdown"]');
+  const menu = document.getElementById('navbar-dropdown');
+
+  toggleBtn?.addEventListener('click', () => {
+    const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+    menu?.classList.toggle('hidden');
   });
 }
