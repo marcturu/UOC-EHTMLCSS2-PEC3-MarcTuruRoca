@@ -1,12 +1,21 @@
 <section class="relative overflow-hidden pt-8">
   <picture>
-    <!-- Desktop (>= 768px) -->
+    <!-- Desktop (>= 1025px) -->
     <source
-      media="(min-width: 768px)"
+      media="(min-width: 1100px)"
       srcset="
-        ./assets/images/home/hero.jpg?width=1200&as=webp 1200w,
         ./assets/images/home/hero.jpg?width=1600&as=webp 1600w,
         ./assets/images/home/hero.jpg?width=1920&as=webp 1920w
+      "
+      sizes="100vw"
+    />
+
+    <!-- Tablet (768px - 1024px) -->
+    <source
+      media="(min-width: 768px) and (max-width: 1099px)"
+      srcset="
+        ./assets/images/home/hero-mobile.jpg?width=1024&as=webp 1024w,
+        ./assets/images/home/hero-mobile.jpg?width=1200&as=webp 1200w
       "
       sizes="100vw"
     />
@@ -31,10 +40,11 @@
     href=""
     class="
       hero-btn hero-btn--primary absolute
-      left-[50.5%] top-[40%] md:left-[27.5%] md:top-[88%] -translate-x-1/2 -translate-y-1/2
+      left-[50.5%] top-[40%] hero:left-[27.5%] hero:top-[88%] -translate-x-1/2 -translate-y-1/2
       scale-[0.45]
-      sm:scale-[0.80]
-      md:scale-75
+      xs:scale-[0.65]
+      sm:scale-[0.85]
+      md:scale-110
       lg:scale-100
       xl:scale-125
       2xl:scale-150
