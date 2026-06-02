@@ -4,12 +4,13 @@
 }
 
 .card {
-  @apply bg-white rounded overflow-hidden;
+  @apply bg-white;
 }
 
 .speakers-card {
-  @apply relative h-[420px] cursor-pointer border border-border;
+  @apply relative h-[420px] cursor-pointer;
   transform-style: preserve-3d;
+  will-change: transform;
   transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -22,15 +23,14 @@
 
 .speakers-card__front,
 .speakers-card__back {
-  @apply absolute inset-0 flex flex-col items-center overflow-hidden text-center;
+  @apply absolute inset-0 flex flex-col overflow-hidden;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 /* FRONT */
 .speakers-card__front {
-  transform: rotateY(0deg);
-  z-index: 2;
+  @apply items-center text-center rounded border border-border rounded-lg;
 }
 
 .speakers-card__img {
@@ -54,18 +54,20 @@
 
 /* BACK */
 .speakers-card__back {
-  transform: rotateY(180deg);
-  z-index: 1;
-
   @apply bg-secondary text-light;
+  transform: rotateY(180deg);
 }
 
 .speakers-card__body--back {
-  @apply flex flex-col flex-1 p-6 gap-[clamp(0.5rem,2cqw,1rem)];
+  @apply flex flex-col flex-1 p-8 gap-[clamp(0.5rem,2cqw,1rem)];
+}
+
+.speakers-card__body--back .speakers-card__name {
+  @apply text-light;
 }
 
 .speakers-card__bio {
-  @apply flex-1 leading-relaxed text-light/80 m-0;
+  @apply flex-1 leading-relaxed text-light/80 m-0 pr-2;
 }
 
 .speakers-card__links {
@@ -73,7 +75,7 @@
 }
 
 .speakers-card__links i {
-  @apply text-xl;
+  @apply text-2xl;
 }
 
 /* CONTAINER QUERIES */
