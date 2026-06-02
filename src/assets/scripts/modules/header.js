@@ -83,12 +83,22 @@ function initDropdownAutoclose() {
   });
 }
 
-// Add border to header on scroll
+// Add border to header on scroll (only on mobile). Desktop always has border.
 function borderOnScroll() {
   const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('border-b', window.scrollY > 0);
-  });
+  const mq = window.matchMedia('(min-width: 768px)');
+
+  function updateBorder() { 
+    const isMobile = mq.matches;
+    const hasScroll = window.scrollY > 0;
+
+    header.classList.toggle('border-b', isMobile || hasScroll);
+  }
+
+  window.addEventListener('scroll', updateBorder);
+  mq.addEventListener('change', updateBorder);
+
+  updateBorder(); // Set initial state
 }
 
 function toggleMenu() {
