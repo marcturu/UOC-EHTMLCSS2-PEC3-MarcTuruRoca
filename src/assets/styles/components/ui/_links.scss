@@ -1,0 +1,23 @@
+.link-underline {
+  @apply underline;
+
+  &--primary {
+    @apply text-primary;
+
+    &:hover {
+      @apply transition-opacity duration-100 ease-in-out hover:opacity-80;
+    }
+  }
+
+  &--secondary {
+    @apply text-secondary;
+
+    &:hover {
+      @apply transition-opacity duration-100 ease-in-out hover:opacity-50;
+    }
+  }
+}
+
+.link-hover--primary {
+  @apply transition-colors duration-100 ease-in-out hover:text-primary;
+}

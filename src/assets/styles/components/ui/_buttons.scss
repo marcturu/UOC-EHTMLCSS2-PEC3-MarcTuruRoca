@@ -1,0 +1,11 @@
+.hero-btn {
+  @apply whitespace-nowrap z-10 flex items-center gap-2 px-8 py-4 text-base font-normal leading-[1.5] rounded-lg shadow-[inset_0_1px_0_#ffffff26,_0_1px_1px_#00000013];
+}
+
+.hero-btn--primary {
+  @apply bg-primary hover:bg-primary-hover text-white;
+}
+
+.hero-btn--secondary {
+  @apply bg-secondary hover:bg-secondary-hover text-white;
+}
