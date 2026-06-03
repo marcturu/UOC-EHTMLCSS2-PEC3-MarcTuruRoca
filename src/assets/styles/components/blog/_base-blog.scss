@@ -1,0 +1,55 @@
+@use "../../settings/variables" as v;
+
+.article {
+
+  &__two-col {
+    container-type: inline-size;
+    container-name: article-two-col;
+  }
+  // :where() - aplica alineación de texto a los elementos del :where()
+  :where(p, li, blockquote, figcaption) {
+    text-align: justify;
+  }
+
+  // :is() - estilos compartidos entre niveles de heading
+  :is(h2, h3) {
+    color: v.$color-secondary;
+    margin-bottom: v.$spacing-md;
+  }
+
+  :where(p) {
+    color: v.$color-secondary;
+    line-height: 1.8;
+  }
+
+  &__section {
+
+    // :where() - bajo peso específico, fácil de sobreescribir
+    &:where(:not(.article__section--fullwidth)) {
+      padding-inline: 0;
+    }
+
+    // :is() - aplica el mismo estilo a múltiples secciones sin repetir código
+    &:is(.article__section--list, .article__section--reflection) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: v.$container-narrow-max-width;
+        border-top: 3px solid v.$color-border;
+      }
+    }
+  }
+}
+
+@container article-two-col (max-width: 500px) {
+  .article__two-col h2 {
+    font-size: clamp(1.5rem, 8cqw, 2.5rem);
+    flex: none;
+  }
+}
