@@ -20,9 +20,10 @@
 @use "objects/section";
 
 /* ----- Components ----- */
-@use "components/buttons";
-@use "components/links";
-@use "components/card";
+@use "components/ui/buttons";
+@use "components/ui/links";
+@use "components/cards/card";
+@use "components/blog/base-blog";
 /* Speakers */
 //@use "components/speakers/cards-speakers";
 /* Blog */

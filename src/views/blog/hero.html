@@ -1,0 +1,58 @@
+<section class="o-section relative overflow-hidden after:absolute after:inset-0 after:z-[1] after:content-[''] after:bg-[linear-gradient(to_top,rgba(27,27,27,0.75),rgba(27,27,27,0.2),transparent)]" aria-labelledby="article-title">
+  <div class="max-h-[400px]">
+    <picture>
+      <!-- Mobile (2:3 -> 0.6667) -->
+      <source
+        media="(max-width: 576px)"
+        srcset="
+          ./assets/images/blog/hero-mobile.jpg?width=600&as=webp 600w,
+          ./assets/images/blog/hero-mobile.jpg?width=900&as=webp 900w
+        "
+        sizes="100vw"
+      />
+      <!-- Tablet (5:4 -> 1.25) -->
+      <source
+        media="(max-width: 992px)"
+        srcset="
+          ./assets/images/blog/hero-tablet.jpg?width=900&as=webp 900w,
+          ./assets/images/blog/hero-tablet.jpg?width=1200&as=webp 1200w
+        "
+        sizes="100vw"
+      />
+      <!-- Desktop (2:1 -> 2) -->
+      <img
+        class="w-full h-full object-cover object-center block"
+        src="./assets/images/blog/hero-desktop.jpg?width=1200&as=webp"
+        srcset="
+          ./assets/images/blog/hero-desktop.jpg?width=1200&as=webp 1200w,
+          ./assets/images/blog/hero-desktop.jpg?width=1600&as=webp 1600w,
+          ./assets/images/blog/hero-desktop.jpg?width=1920&as=webp 1920w
+        "
+        alt=""
+        width="1200"
+        height="600"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </picture>
+  </div>
+  <div class="o-container absolute inset-0 flex flex-col justify-center py-16 text-light gap-4 mt-10 z-[2] drop-shadow-[5px_5px_20px_#1b1b1b]">
+    <h1 class="leading-[1.2] text-[clamp(3rem,6vw,6rem)] text-primary text-shadow-[1px_1px_1px_rgba(252,250,248,0.8)]" id="article-title">
+      La artesania<br />en la era digital
+    </h1>
+    <p class="flex gap-4 mb-8 flex-wrap opacity-90">
+      <span class="text-light">por Associación Cultural Materia</span>
+      <time datetime="2026-05-10" class="text-light">10 de mayo de 2026</time>
+    </p>
+    <a href="/blog#intro-heading" class="hero-btn hero-btn--primary max-w-max origin-left
+      scale-[0.65] 
+      xs:scale-70 
+      sm:scale-85 
+      md:scale-90 
+      lg:scale-100"
+    >
+      DESCUBRE MÁS
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </div>
+</section>
