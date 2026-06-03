@@ -6,6 +6,12 @@
     container-type: inline-size;
     container-name: article-two-col;
   }
+
+  &__list {
+    container-type: inline-size;
+    container-name: article-list;
+  }
+
   // :where() - aplica alineación de texto a los elementos del :where()
   :where(p, li, blockquote, figcaption) {
     text-align: justify;
@@ -51,5 +57,18 @@
   .article__two-col h2 {
     font-size: clamp(1.5rem, 8cqw, 2.5rem);
     flex: none;
+  }
+}
+
+@container article-list (max-width: 992px) {
+  .article__list-number {
+    font-size: 2rem;
+    width: auto;
+  }
+}
+
+@container article-list (max-width: 992px) {
+  .article__list-item {
+    gap: v.$spacing-sm;
   }
 }
