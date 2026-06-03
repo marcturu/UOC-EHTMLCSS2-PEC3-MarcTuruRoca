@@ -12,6 +12,11 @@
     container-name: article-list;
   }
 
+  &__blockquote {
+    container-type: inline-size;
+    container-name: article-quote;
+  }
+
   // :where() - aplica alineación de texto a los elementos del :where()
   :where(p, li, blockquote, figcaption) {
     text-align: justify;
@@ -70,5 +75,11 @@
 @container article-list (max-width: 992px) {
   .article__list-item {
     gap: v.$spacing-sm;
+  }
+}
+
+@container article-quote (max-width: 400px) {
+  .article__blockquote p {
+    font-size: clamp(0.9rem, 5cqw, 1.1rem);
   }
 }

@@ -22,26 +22,9 @@
 /* ----- Components ----- */
 @use "components/ui/buttons";
 @use "components/ui/links";
-@use "components/cards/card";
+@use "components/ui/card";
+@use "components/ui/blockquote";
 @use "components/blog/base-blog";
-/* Speakers */
-//@use "components/speakers/cards-speakers";
-/* Blog */
-//@use "components/blog/hero-blog";
-//@use "components/blog/base-blog";
-//@use "components/blog/intro";
-//@use "components/blog/list";
-//@use "components/blog/blockquote";
-//@use "components/blog/figure";
-//@use "components/blog/reflection";
-//@use "components/blog/index-blog";
-/* Contact */
-//@use "components/contact/hero-contact";
-//@use "components/contact/section-contact";
-//@use "components/contact/cards-contact";
-//@use "components/contact/form";
-//@use "components/contact/map";
-//@use "components/contact/index-contact";
 
 /* ----- Utilities ----- */
 @use "utilities/helpers";
