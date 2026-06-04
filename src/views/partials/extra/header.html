@@ -1,41 +1,61 @@
 <header>
-    <div class="max-w-5xl mx-auto px-6 py-10 flex items-center justify-between">
+  <div class="max-w-5xl mx-auto px-6 py-10">
 
-      <!-- Logo / marca -->
+    <!-- Fila superior -->
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
       <a href="#" class="text-xl font-semibold tracking-tight">
         Cooking contest 2024 edition
       </a>
 
-      <!-- Navegación principal -->
-      <nav aria-label="Primary navigation">
+      <!-- Botón hamburguesa (solo móvil) -->
+      <button
+        id="menu-toggle"
+        class="md:hidden flex flex-col gap-1.5 p-2 cursor-pointer"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span class="block w-6 h-0.5 bg-current transition-transform duration-300" id="bar1"></span>
+        <span class="block w-6 h-0.5 bg-current transition-opacity duration-300"  id="bar2"></span>
+        <span class="block w-6 h-0.5 bg-current transition-transform duration-300" id="bar3"></span>
+      </button>
+
+      <!-- Navegación desktop -->
+      <nav aria-label="Primary navigation" class="hidden md:block">
         <ul class="flex items-center gap-8">
+          <li><a href="#" class="text-base font-semibold hover:text-gray-500 transition-colors">Home</a></li>
+          <li><a href="#" class="text-base font-semibold hover:text-gray-500 transition-colors">The contest</a></li>
+          <li><a href="#" class="text-base font-semibold hover:text-gray-500 transition-colors">Recipes</a></li>
           <li>
-            <a href="#" class="text-base font-semibold hover:text-gray-500 transition-colors">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-base font-semibold hover:text-gray-500 transition-colors">
-              The contest
-            </a>
-          </li>
-          <li>
-            <a href="#" class="text-base font-semibold hover:text-gray-500 transition-colors">
-              Recipes
-            </a>
-          </li>
-          <li>
-            <!-- Página activa -->
-            <a
-              href="#"
-              aria-current="page"
-              class="bg-black text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors"
-            >
+            <a href="#" aria-current="page"
+               class="bg-black text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
               Contestants
             </a>
           </li>
         </ul>
       </nav>
-
     </div>
-  </header>
+
+    <!-- Menú móvil (oculto por defecto) -->
+    <nav
+      id="main-nav"
+      class="md:hidden hidden pt-4 pb-2"
+      aria-label="Mobile navigation"
+    >
+      <ul class="flex flex-col gap-1">
+        <li><a href="#" class="block py-3 text-base font-semibold hover:text-gray-500 transition-colors">Home</a></li>
+        <li><a href="#" class="block py-3 text-base font-semibold hover:text-gray-500 transition-colors">The contest</a></li>
+        <li><a href="#" class="block py-3 text-base font-semibold hover:text-gray-500 transition-colors">Recipes</a></li>
+        <li class="pt-2">
+          <a href="#" aria-current="page"
+             class="inline-block bg-black text-white px-5 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
+            Contestants
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>

@@ -1,5 +1,9 @@
-import { initHeader } from './modules/header.js'
-import { initAOS } from './modules/aos.js'
+import { initHeader } from './modules/main-header.js'
+import { initMenu }   from './modules/extra-header.js'
+import { initAOS }    from './modules/aos.js'
 
-initHeader();
-initAOS();
+document.addEventListener('DOMContentLoaded', () => {
+  initHeader();
+  initMenu();
+  initAOS();
+});
