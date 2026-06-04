@@ -1,0 +1,97 @@
+
+<header class="fixed top-0 left-0 w-full z-[100] bg-light/70 border-border backdrop-blur-sm" id="header">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only">
+    Saltar al contenido principal
+  </a>
+
+  <div class="o-container flex items-center justify-between py-3 mx-auto">
+    <!-- Logo -->
+    <a href="./index" class="flex items-center" aria-label="Saborea México - Inicio">
+      <img
+        src="./assets/images/ACMateria.png?width=130&as=webp"
+        srcset="
+          ./assets/images/ACMateria.png?width=130&as=webp 1x,
+          ./assets/images/ACMateria.png?width=260&as=webp 2x,
+          ./assets/images/ACMateria.png?width=390&as=webp 3x
+        "
+        alt="Asociación Cultural Materia logo"
+        class="header__logo"
+        width="130"
+        height="72"
+        decoding="async"
+        fetchpriority="high"
+      />
+    </a>
+
+     <div class="ml-auto flex items-center gap-6">
+      <!-- Mobile menu button -->
+      <button
+        data-collapse-toggle="navbar-dropdown"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-secondary md:hidden hover:text-primary-hover focus:outline-none cursor-pointer
+          aria-expanded:bg-light aria-expanded:border aria-expanded:border-border aria-expanded:rounded-md"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+        aria-controls="navbar-dropdown">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <!-- Navbar (links) -->
+      <nav class="hidden fixed left-5 right-5 top-[110px] z-[99]
+        md:block md:w-auto md:static md:bg-transparent md:border-0 md:shadow-none md:p-0 md:mt-0
+        bg-white border border-border rounded-md shadow-lg p-4" id="navbar-dropdown" aria-label="Navegación principal">
+        <ul class="flex flex-col md:flex-row gap-2 md:gap-8 md:p-0">
+          <li>
+            <a href="./index" class="link-hover--primary block text-secondary rounded md:bg-transparent hover:bg-light md:hover:bg-transparent p-1 md:p-0">Inicio</a>
+          </li>
+
+          <li class="relative hover:bg-light md:hover:bg-transparent">
+            <button id="dropdownNavbarButton" data-dropdown-toggle="dropdownNavbar" class="link-hover--secondary flex items-center justify-between text-secondary md:border-0 cursor-pointer p-1 md:p-0 gap-1 ">
+              Ponentes
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+
+            <!-- Dropdown menu items -->
+            <div id="dropdownNavbar" class="z-10 hidden bg-white shadow-lg border border-border rounded-md w-40">
+              <ul class="flex flex-col text-secondary" aria-labelledby="dropdownNavbarButton">
+                <li>
+                  <a href="./speakers#marc" class="link-hover--primary inline-flex items-center w-full px-4 py-1 mt-2 text-secondary hover:bg-light">Marc</a>
+                </li>
+                <li>
+                  <a href="./speakers#cesar" class="link-hover--primary inline-flex items-center w-full px-4 py-1 text-secondary hover:bg-light">César</a>
+                </li>
+                <li>
+                  <a href="./speakers#ana" class="link-hover--primary inline-flex items-center w-full px-4 py-1 text-secondary hover:bg-light">Ana</a>
+                </li>
+                <li>
+                  <a href="./speakers#julian" class="link-hover--primary inline-flex items-center w-full px-4 py-1 text-secondary hover:bg-light">Julián</a>
+                </li>
+                <li>
+                  <a href="./speakers#maria" class="link-hover--primary inline-flex items-center w-full px-4 py-1 text-secondary hover:bg-light">María</a>
+                </li>
+                <li>
+                  <a href="./speakers#rick" class="link-hover--primary inline-flex items-center w-full px-4 py-1 text-secondary hover:bg-light">Rick</a>
+                </li>
+                <li>
+                  <hr class="border-0 border-t border-border my-1">
+                </li>
+                <li>
+                  <a href="./speakers" class="link-hover--primary inline-flex items-center w-full px-4 py-1 mb-2 text-secondary hover:bg-light">Consultar todos</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <a href="./blog" class="link-hover--primary block text-secondary rounded md:border-0 hover:bg-light md:hover:bg-transparent p-1 md:p-0">Blog</a>
+          </li>
+          <li>
+            <a href="./extra" class="link-hover--primary block text-secondary rounded md:border-0 hover:bg-light md:hover:bg-transparent p-1 md:p-0">Extra</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+</header>

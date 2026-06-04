@@ -1,16 +1,9 @@
-/**
- * Import dependencies from node_modules
- * see commented examples below
- */
+import { initHeader } from './modules/main-header.js'
+import { initMenu }   from './modules/extra-header.js'
+import { initAOS }    from './modules/aos.js'
 
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
-
-/**
- * Write any other JavaScript below
- */
-
-+(function () {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-})();
+document.addEventListener('DOMContentLoaded', () => {
+  initHeader();
+  initMenu();
+  initAOS();
+});

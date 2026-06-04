@@ -1,9 +1,19 @@
 @use "../settings/variables" as v;
-@use "../tools/functions" as f;
 
-/* Tailwind custom properties */
 @theme {
-  --color-primary: #dc2626;
-  --font-sans: system-ui, sans-serif;
-  --spacing-96: 24rem;
+  --color-primary: #bf7233;
+  --color-primary-hover: #c98752;
+  --color-secondary: #2f3e46;
+  --color-secondary-hover: #28353c;
+  --color-accent: #7fa98c;
+  --color-light: #fcfaf8;
+  --color-dark: #1b1b1b;
+  --color-highlight: #e0a458;
+  --color-border: #e6ded3;
+
+  --font-primary: 'League Gothic', sans-serif;
+  --font-secondary: 'DM Sans', sans-serif;
+
+  --breakpoint-xs: 480px;
+  --breakpoint-hero: 1100px;
 }

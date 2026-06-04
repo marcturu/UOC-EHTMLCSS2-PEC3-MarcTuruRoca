@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico" />
@@ -13,16 +13,21 @@
     <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
 
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
-    <title>Asociación Cultural Materia - Jornadas Artesanales</title>
+    <title>Blog - Asociación Cultural Materia</title>
     <meta
       name="description"
-      content="Sitio web oficial de la Asociación Cultural Materia, dedicada a promover y preservar las tradiciones artesanales a través de sus Jornadas Artesanales, un evento anual en colaboración con el ayuntamiento de Barcelona."
+      content="Descubre las últimas noticias, eventos y artículos relacionados con la Asociación Cultural Materia y sus Jornadas Artesanales."
     />
   </head>
   <body>
     <include src="./views/partials/header.html"></include>
     <main id="main-content">
-      <include src="./views/home/home.html"></include>
+      <include src="./views/blog/hero.html"></include>
+      <article class="article" aria-labelledby="article-title">
+        <include src="./views/blog/intro.html"></include>
+        <include src="./views/blog/list.html"></include>
+        <include src="./views/blog/final.html"></include>
+      </article>
     </main>
     <include src="./views/partials/footer.html"></include>
 

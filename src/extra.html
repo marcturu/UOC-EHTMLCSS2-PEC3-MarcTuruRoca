@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/images/favicon/android-chrome-512x512.png" />
+  <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+
+  <link rel="stylesheet" type="text/css" href="./assets/styles/extra.scss" />
+  <title>Contestants – Cooking Contest 2024</title>
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <include src="./views/partials/extra/header.html"></include>
+
+  <main>
+    <section aria-labelledby="hero-heading">
+      <div class="max-w-5xl mx-auto px-6 pt-4 pb-8 md:pt-24 md:pb-40 text-center">
+        <h1
+          id="hero-heading"
+          class="text-3xl sm:text-5xl font-bold tracking-tight mb-5"
+        >
+          Contestants
+        </h1>
+        <p class="text-gray-500 text-xl">
+          This section describes the recipes of the best contestants
+        </p>
+      </div>
+
+      <div class="overflow-hidden w-full max-w-5xl mx-auto px-6">
+        <img
+          src="./assets/images/extra/MockupPic.jpg"
+          alt="Assorted dishes spread on a table during the cooking contest"
+          class="w-full h-full object-cover object-center rounded-lg"
+        />
+      </div>
+    </section>
+
+    <section
+      aria-labelledby="recipes-heading"
+      class="max-w-5xl mx-auto px-6 pt-12 md:pt-20"
+    >
+      <div class="mb-5">
+        <h2
+          id="recipes-heading"
+          class="text-3xl font-semibold tracking-tight"
+        >
+          The recipes
+        </h2>
+        <p class="text-gray-500 text-lg mt-2">
+          These are the recipes of the best contestants
+        </p>
+      </div>
+
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        role="list"
+      >
+        <li class="recipe-card">
+          <h3 class="text-base font-semibold">Cajun seafood pasta</h3>
+          <div class="recipe-card__author">
+            <img
+              src="https://i.pravatar.cc/40?img=11"
+              alt="John Cooper"
+              class="recipe-card__avatar"
+            />
+            <div>
+              <p class="recipe-card__name">John Cooper</p>
+              <p class="recipe-card__description">
+                This Cajun seafood pasta recipe is a hot one, but delicious!
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="recipe-card">
+          <h3 class="text-base font-semibold">Cedar planked salmon</h3>
+          <div class="recipe-card__author">
+            <img
+              src="https://i.pravatar.cc/40?img=5"
+              alt="Marta Alonso"
+              class="recipe-card__avatar"
+            />
+            <div>
+              <p class="recipe-card__name">Marta Alonso</p>
+              <p class="recipe-card__description">
+                Salmon reaches its full potential when it's grilled on top of a cedar plank.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="recipe-card">
+          <h3 class="text-base font-semibold">Poulet au vinaigre</h3>
+          <div class="recipe-card__author">
+            <img
+              src="https://i.pravatar.cc/40?img=47"
+              alt="Mary Ann Stones"
+              class="recipe-card__avatar"
+            />
+            <div>
+              <p class="recipe-card__name">Mary Ann Stones</p>
+              <p class="recipe-card__description mr-1.5">
+                Irresistible chicken, cooked with vinegar.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <include src="./views/partials/extra/footer.html"></include>
+
+  <script type="module" src="./assets/scripts/main.js"></script>
+</body>
+</html>

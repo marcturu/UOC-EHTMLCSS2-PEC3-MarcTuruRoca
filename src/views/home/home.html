@@ -1,0 +1,56 @@
+<section class="relative overflow-hidden pt-8">
+  <picture>
+    <!-- Desktop (>= 1025px) -->
+    <source
+      media="(min-width: 1100px)"
+      srcset="
+        ./assets/images/home/hero.jpg?width=1600&as=webp 1600w,
+        ./assets/images/home/hero.jpg?width=1920&as=webp 1920w
+      "
+      sizes="100vw"
+    />
+
+    <!-- Tablet (768px - 1024px) -->
+    <source
+      media="(min-width: 768px) and (max-width: 1099px)"
+      srcset="
+        ./assets/images/home/hero-mobile.jpg?width=1024&as=webp 1024w,
+        ./assets/images/home/hero-mobile.jpg?width=1200&as=webp 1200w
+      "
+      sizes="100vw"
+    />
+
+    <!-- Mobile default -->
+    <img
+      class="h-vh w-full object-cover"
+      src="./assets/images/home/hero-mobile.jpg?width=900&as=webp"
+      srcset="
+        ./assets/images/home/hero-mobile.jpg?width=900&as=webp 900w,
+        ./assets/images/home/hero-mobile.jpg?width=1200&as=webp 1200w
+      "
+      alt=""
+      width="900"
+      height="1200"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
+
+  <a
+    href="/blog"
+    class="
+      hero-btn hero-btn--secondary absolute origin-center
+      left-[50.5%] top-[40%] hero:left-[27.5%] hero:top-[88%] -translate-x-1/2 -translate-y-1/2
+      scale-[0.50]
+      xs:scale-[0.65]
+      sm:scale-[0.85]
+      md:scale-110
+      lg:scale-100
+      xl:scale-125
+      2xl:scale-150
+    "
+  >
+    MÁS INFORMACIÓN
+    <i class="fa-solid fa-arrow-right"></i>
+  </a>
+</section>
