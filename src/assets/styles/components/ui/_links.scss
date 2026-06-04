@@ -5,7 +5,7 @@
     @apply text-primary;
 
     &:hover {
-      @apply transition-opacity duration-100 ease-in-out hover:opacity-80;
+      @apply opacity-80;
     }
   }
 
@@ -13,7 +13,7 @@
     @apply text-secondary;
 
     &:hover {
-      @apply transition-opacity duration-100 ease-in-out hover:opacity-50;
+      @apply opacity-50;
     }
   }
 }
