@@ -19,27 +19,26 @@ function setActiveNav() {
 
   document.querySelectorAll('#navbar-dropdown a').forEach(link => {
     const linkPath = normalizePath(new URL(link.href, location.href).pathname);
-
     const isActive = currentPath === linkPath && linkPath !== '';
 
     if (isActive) {
       link.classList.remove('text-secondary');
       link.classList.add('text-primary', 'font-semibold');
       link.setAttribute('aria-current', 'page');
-    }
-    else {
+    } else {
       link.classList.remove('text-primary', 'font-semibold');
       link.classList.add('text-secondary');
       link.removeAttribute('aria-current');
     }
   });
 
-  // For the dropdown links (Ponentes)
   document.querySelectorAll('#dropdownNavbar a').forEach(link => {
     link.removeAttribute('aria-current');
     link.classList.remove('text-primary', 'font-semibold');
     link.classList.add('text-secondary');
   });
+
+  if (!dropdownButton) return; // ← guarda aquí
 
   const isSpeakerSection = currentPath.startsWith('/speakers');
   dropdownButton.classList.toggle('text-primary', isSpeakerSection);
@@ -86,6 +85,8 @@ function initDropdownAutoclose() {
 // Add border to header on scroll (only on mobile). Desktop always has border.
 function borderOnScroll() {
   const header = document.getElementById('header');
+  if (!header) return;
+  
   const mq = window.matchMedia('(min-width: 768px)');
 
   function updateBorder() { 
