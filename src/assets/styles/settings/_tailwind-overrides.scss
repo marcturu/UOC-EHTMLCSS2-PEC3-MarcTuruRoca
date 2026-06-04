@@ -2,19 +2,19 @@
 
 /* Tailwind custom properties */
 @theme {
-  --color-primary: #{v.$color-primary};
-  --color-primary-hover: #{v.$color-primary-hover};
-  --color-secondary: #{v.$color-secondary};
-  --color-secondary-hover: #{v.$color-secondary-hover};
-  --color-accent: #{v.$color-accent};
-  --color-light: #{v.$color-light};
-  --color-dark: #{v.$color-dark};
-  --color-highlight: #{v.$color-highlight};
-  --color-border: #{v.$color-border};
+  --color-primary: #bf7233;
+  --color-primary-hover: #c98752;
+  --color-secondary: #2f3e46;
+  --color-secondary-hover: #28353c;
+  --color-accent: #7fa98c;
+  --color-light: #fcfaf8;
+  --color-dark: #1b1b1b;
+  --color-highlight: #e0a458;
+  --color-border: #e6ded3;
 
-  --font-primary: #{v.$font-primary};
-  --font-secondary: #{v.$font-secondary};
+  --font-primary: 'League Gothic', sans-serif;
+  --font-secondary: 'DM Sans', sans-serif;
 
-  --breakpoint-xs: #{v.$breakpoint-xs};
-  --breakpoint-hero: #{v.$breakpoint-hero};
+  --breakpoint-xs: 480px;
+  --breakpoint-hero: 1100px;
 }
