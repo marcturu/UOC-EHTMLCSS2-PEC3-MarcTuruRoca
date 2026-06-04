@@ -22,8 +22,9 @@
 /* ----- Components ----- */
 @use "components/ui/buttons";
 @use "components/ui/links";
-@use "components/ui/card";
 @use "components/ui/blockquote";
+@use "components/ui/speakers-card";
+@use "components/ui/recipe-card";
 @use "components/blog/base-blog";
 
 /* ----- Utilities ----- */
