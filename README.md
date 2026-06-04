@@ -1,67 +1,130 @@
-# UOC Boilerplate
+# <img src="src/assets/images/ACMateria.png" alt="Asociación Cultural Materia" width="200"/> - Jornadas Artesanales v2
 
-UOC Boilerplate is a starter template for the HTML and CSS Tools courses from the [Master's Program in Multimedia Applications](https://estudis.uoc.edu/ca/masters-universitaris/aplicacions-multimedia/presentacio) and the [Master's Program in Web App and Website Development](https://estudis.uoc.edu/ca/masters-universitaris/desenvolupament-llocs-aplicacions-web/presentacio) at the [Universitat Oberta de Catalunya](https://www.uoc.edu). It aims to provide a basic, modern frontend web development starter pack based on Parcel and including a Sass compiler, an ES6 transpiler, minifiers, an image transformer, and development tools.
+Sitio web de **jornadas artesanales** impulsado por la **Asociación Cultural Materia** en colaboración con el ayuntamiento de Barcelona.
 
-This is the 3.x version of UOC Boilerplate, available since the UOC 2020-2 semester.
+Desarrollado como parte de la asignatura Herramientas HTML y CSS II del Máster Universitario de Desarrollo de Sitios y Aplicaciones Web de la [Universitat Oberta de Catalunya](https://www.uoc.edu), utilizando la versión 3.x de [UOC Boilerplate](https://github.com/uoc-advanced-html-css/uoc-boilerplate) como plantilla de inicio - una base moderna de desarrollo frontend que incluye Parcel, un compilador de Sass, un transpilador ES6, minificadores, un transformador de imágenes y herramientas de desarrollo.
+Creado por Jordi Tarrida (jorditarrida@uoc.edu).
 
-## Requirements
+### Páginas
 
-[Node.js](http://nodejs.org/) >= 18.x
+- **Portada** - Póster de bienvenida con información esencial sobre las jornadas.
+- **Ponentes** - Tarjetas con los ponentes que participaran en las jornadas.
+- **Blog** - Artículo con información variada sobre las jornadas y lo que las envuelve.
+- **Extra** - Página de ejemplo inspirada en mockup previo.
 
-## Getting started
+### Metodología
 
-Clone this repository with `git clone`, or download a .zip file using the top right green button.
+- **ITCSS** — arquitectura de estilos (settings, tools, generic, elements, objects, components, utilities)
+- **OOCSS** — clases de objetos reutilizables (`o-container`, `o-section`)
+- **BEM** — convención de nomenclatura para clases CSS (solamente utilizada en extracción de clases con `@apply`)
 
-Using the Terminal, navigate to the project folder and run `npm install`.
+## Desarrollado con
 
-## Features
+### Requisitos
 
-- Uses [Parcel v2](https://parceljs.org) module bundler.
-- NPM scripts for fast development and production build (see Commands below).
+[Node.js](http://nodejs.org/) >= 20.x
 
-### Stylesheets
+### Núcleo
 
-- [Sass/SCSS](https://sass-lang.com) to CSS compilation (`@parcel/transformer-sass`).
-- Transpilation of modern CSS synthax to support older bvrowsers, based on `browserslist`, including vendor prefixing and synthax lowering, with [PostCSS](https://postcss.org/) (`@parcel/transformer-postcss`).
-- Minification and optimization of CSS files on production builds with [`lightningcss`](https://github.com/parcel-bundler/lightningcss) (`@parcel/optimizer-css`).
+| Tecnología | Uso |
+| --- | --- |
+| [Parcel v2](https://parceljs.org) | Empaquetador - servidor de desarrollo, build de producción, pipeline de assets |
+| [Sass/SCSS](https://sass-lang.com) | Preprocesador CSS - variables, anidado, funciones, mixins, parciales (`@parcel/transformer-sass`) |
+| [PostCSS](https://postcss.org/) | Transpilación CSS - prefijos de proveedor y compatibilidad con navegadores antiguos (`@parcel/transformer-postcss`, `postcss-preset-env`) |
+| [PostHTML](https://github.com/posthtml/posthtml) | Parciales HTML mediante `posthtml-include` (`@parcel/transformer-posthtml`) |
 
-### HTML
+### Optimización (build de producción)
 
-- Minification and optimization of CSS files on production builds [`htmlnano`](https://github.com/posthtml/htmlnano) (`@parcel/optimizer-htmlnano`).
-- [PostHTML](https://github.com/posthtml/posthtml) (`@parcel/transformer-posthtml`) features:
-  - Include partial HTML files with [`posthtml-include`](https://github.com/posthtml/posthtml-include).
+| Tecnología | Uso |
+| --- | --- |
+| [`lightningcss`](https://github.com/parcel-bundler/lightningcss) | Minificación y optimización de CSS (`@parcel/optimizer-css`) |
+| [`htmlnano`](https://github.com/posthtml/htmlnano) | Minificación de HTML (`@parcel/optimizer-htmlnano`) |
+| [SWC](https://swc.rs/) | Minificación de JavaScript (`@parcel/optimizer-swc`) |
+| [Babel](https://babeljs.io/) | Transpilación de JavaScript para navegadores antiguos (`@parcel/transformer-babel`) |
+| [`sharp`](https://sharp.pixelplumbing.com/) | Transformación de imágenes y conversión a WebP (`@parcel/transformer-image`) |
 
-### Scripts
+### Dependencias
 
-- Transpilation of modern JavaScript synthax to support older browsers, based on `browserslist`, with with [Babel](https://babeljs.io/) (`@parcel/transformer-babel`).
-- Minification and optimization of JS code with [SWC](https://swc.rs/) (`@parcel/optimizer-swc`).
+| Dependencia | Uso |
+| --- | --- |
+| [Tailwind CSS](https://tailwindcss.com/) | Framework CSS utility-first `"tailwindcss": "^4.3.0"` |
+| [AOS](https://michalsnik.github.io/aos/) | Animaciones al hacer scroll `"aos": "^2.3.4"` |
+| [Font Awesome](https://fontawesome.com/) | Iconos `"@fortawesome/fontawesome-free": "^7.2.0"` |
 
-### Images
+### Carcaterísticas
+El proyecto incorpora funcionalidades modernas de **CSS utility-first** y técnicas avanzadas de maquetación para mejorar la escalabilidad, el rendimiento y la adaptabilidad del diseño.
 
-- Image transformation with [`sharp`](https://sharp.pixelplumbing.com/) ([`@parcel/transformer-image`](https://parceljs.org/recipes/image/)).
+#### Tailwind CSS: personalización y abstracción
+- `@apply` → permite extraer y reutilizar utilidades de Tailwind dentro de clases CSS personalizadas, reduciendo repetición y mejorando la mantenibilidad.
+- `@theme` → define tokens de diseño (colores, tipografías, espaciados, etc.) para extender o centralizar el sistema de diseño de Tailwind.
+#### Condicionales y consultas CSS modernas
+- `@container` → estilos basados en el tamaño del contenedor, no del viewport.
+- `:is(), :where()` → refinamiento de selectores y lógica condicional avanzada en CSS.
+#### Unidades de viewport modernas
+- `cqw, cqh,...` → unidades relativas al tamaño del contenedor (Container Query Units).
+#### Layout moderno
+- `CSS Flex` → sistema de disposición unidimensional flexible.
+- `CSS Grid` → sistema de layout bidimensional para estructuras complejas.
 
-### Development
+## Comandos
 
-- Development server launch and live reloading on file changes.
-- Friendly error reporting.
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Inicia el servidor de desarrollo en http://localhost:8123 con recarga en vivo |
+| `npm run build` | Compila y optimiza los archivos para producción en `dist/` |
+| `npm run clean` | Elimina la carpeta `dist/` y las cachés |
 
-## How to use this boilerplate
+## Estructura del proyecto
 
-Content lives inside the `src/` folder. If you do not want to change the configuration or are unsure about what you are doing, do not edit files outside the `src/` folder.
+```
+src/
+├── index.html
+├── blog.html
+├── speakers.html
+├── extra.html
+├── views/ 
+│   ├── partials/               # Parciales PostHTML
+│   │   ├── header.html          
+│   │   └── footer.html
+│   ├── home/
+│   │   └── home.html
+│   ├── speakers/
+│   │   └── cards.html
+│   ├── blog/
+│   │   ├── hero.html    
+│   │   ├── intro.html  
+│   │   ├── list.html    
+│   │   └── final.html
+├── assets/
+│   ├── fonts/                  # Fuentes autoalojadas (League Gothic, DM Sans)
+│   ├── images/                 # Imágenes optimizadas en WebP
+│   ├── scripts/
+│   │   ├── main.js
+│   │   └── modules/            # Módulos JS (aos, header)
+│   └── styles/
+│       ├── main.scss
+│       ├── extra.scss
+│       ├── _dependencies.scss
+│       ├── settings/           # Variables, fuentes, tailwind overrides (@theme)
+│       ├── tools/              # Funciones
+│       ├── generic/            # Reset
+│       ├── elements/           # Estilos base
+│       ├── objects/            # Objetos OOCSS
+│       ├── components/ 
+│       │   ├── blog/           
+│       │   ├── ui/             # Extracción de clases (@apply)     
+│       └── utilities/          # Clases de utilidad
+```
 
-Always run the following commands during the development stage and for production builds. Please note that it is expected that all projects built with this boilerplate are compiled using `npm run build` before they are published.
+## Despliegue
 
-### Commands
+El proyecto está desplegado en [Netlify](https://netlify.com) desde la rama `main`:
+https://uoc-ehtmlcss2-pec3-marctururoca.netlify.app/
 
-| Command         | Description                                                                                                                                                                                                                                                                                                                                                         |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run dev`   | Runs a local web server for development and opens the browser to display it. Automatically compiles styles and scripts whenever a file in `src/` is changed, and live reloads the browser. This is what _must be run_ on the development stage.                                                                                                                     |
-| `npm run build` | Compiles and minifies and optimizes the files in the assets folder. The generated compiled and optimized files are located in the `dist/` folder. This is what _must be run_ before publishing the project. This is also the build command to be run by external deployment services such as Netlify. The publishable files are then located in the `dist/` folder. |
-| `npm run clean` | Deletes the current `/dist` folder and cache folders.                                                                                                                                                                                                                                                                                                               |
-| `npm run test`  | Displays a success message if everything is working as expected.                                                                                                                                                                                                                                                                                                    |
+- **Comando de build:** `npm run build`
+- **Directorio de publicación:** `dist`
 
-## Need help? / Want to help out?
+---
 
-Feel free to create a [new issue](https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues/new/) or drop me a line at jorditarrida@uoc.edu.
-
-Are you using this Boilerplate for your projects or for educational purposes? I would love to hear about it!
+Marc Turu Roca (https://github.com/marcturu/UOC-EHTMLCSS2-PEC3-MarcTuruRoca)  
+*UOC - PEC3 · Herramientas HTML y CSS II · 2025-2026*
