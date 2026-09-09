@@ -28,7 +28,7 @@ Developed using version 3.x of [UOC Boilerplate](https://github.com/uoc-advanced
 
 ## ⚡ Features
 
-The project incorporates modern **utility-first CSS** functionality and advanced layout techniques to improve scalability, performance, and design adaptability.
+The project incorporates modern **Utility-first & Atomic CSS** functionality and advanced layout techniques to improve scalability, performance, and design adaptability.
 
 #### Tailwind CSS: customization and abstraction
 - `@apply` → extracts and reuses Tailwind utilities inside custom CSS classes, reducing repetition and improving maintainability.
