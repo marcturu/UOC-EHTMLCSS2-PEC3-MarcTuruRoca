@@ -186,3 +186,28 @@ src/
 ---
 
 ## 📷 Screenshots
+
+### Index (Desktop):
+![DesktopIndex](screenshots/Desktop_index.png)
+
+### Speakers (Desktop):
+![DesktopSpeakers](screenshots/Desktop_speakers.png)
+
+### Blog (Desktop):
+![DesktopBlog](screenshots/Desktop_blog.png)
+
+### Extra (Desktop):
+![DesktopExtra](screenshots/Desktop_extra.png)
+-
+
+### Index (Mobile):
+![MobileIndex](screenshots/Mobile_index.png)
+
+### Speakers (Mobile):
+![MobileSpeakers](screenshots/Mobile_speakers.png)
+
+### Blog (Mobile):
+![MobileBlog](screenshots/Mobile_blog.png)
+
+### Extra (Mobile):
+![MobileExtra](screenshots/Mobile_extra.png)
