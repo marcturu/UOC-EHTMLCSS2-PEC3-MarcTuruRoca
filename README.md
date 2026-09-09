@@ -197,6 +197,8 @@ src/
 ![DesktopBlog](screenshots/Desktop_blog.png)
 
 ### Extra (Desktop):
+> The extra page base mockup can be seen at https://github.com/marcturu/ac-materia-v2/tree/main/docs.
+
 ![DesktopExtra](screenshots/Desktop_extra.png)
 -
 
