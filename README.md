@@ -1,80 +1,146 @@
-# <img src="src/assets/images/ACMateria.png" alt="Asociación Cultural Materia" width="200"/> - Jornadas Artesanales v2
+# <img src="src/assets/images/ACMateria.png" alt="Asociación Cultural Materia" width="200"/> — Artisan Workshops v2 (Jornadas Artesanales)
 
-Sitio web de **jornadas artesanales** impulsado por la **Asociación Cultural Materia** en colaboración con el ayuntamiento de Barcelona.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![Parcel](https://img.shields.io/badge/Parcel-E7A93D?style=for-the-badge&logo=parcel&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
-Desarrollado como parte de la asignatura Herramientas HTML y CSS II del Máster Universitario de Desarrollo de Sitios y Aplicaciones Web de la [Universitat Oberta de Catalunya](https://www.uoc.edu), utilizando la versión 3.x de [UOC Boilerplate](https://github.com/uoc-advanced-html-css/uoc-boilerplate) como plantilla de inicio - una base moderna de desarrollo frontend que incluye Parcel, un compilador de Sass, un transpilador ES6, minificadores, un transformador de imágenes y herramientas de desarrollo.
-Creado por Jordi Tarrida (jorditarrida@uoc.edu).
+<sub>🗓️ Developed in June 2026</sub>
 
-### Páginas
+This project is a website for **artisan workshops** organized by the **Asociación Cultural Materia**, in collaboration with the Barcelona City Council.
 
-- **Portada** - Póster de bienvenida con información esencial sobre las jornadas.
-- **Ponentes** - Tarjetas con los ponentes que participaran en las jornadas.
-- **Blog** - Artículo con información variada sobre las jornadas y lo que las envuelve.
-- **Extra** - Página de ejemplo inspirada en mockup previo.
+Developed using version 3.x of [UOC Boilerplate](https://github.com/uoc-advanced-html-css/uoc-boilerplate) as the starter template: a modern frontend development base that includes Parcel, a Sass compiler, an ES6 transpiler, minifiers, an image transformer, and development tools. Created by Jordi Tarrida (jorditarrida@uoc.edu).
 
-### Metodología
+---
 
-- **ITCSS** — arquitectura de estilos (settings, tools, generic, elements, objects, components, utilities)
-- **OOCSS** — clases de objetos reutilizables (`o-container`, `o-section`)
-- **BEM** — convención de nomenclatura para clases CSS (solamente utilizada en extracción de clases con `@apply`)
+## ✅ Pages
 
-## Desarrollado con
+- **Home**: welcome poster with essential information about the workshops.
+- **Speakers**: cards featuring the speakers taking part in the workshops.
+- **Blog**: article with varied information about the workshops and their context.
+- **Extra**: example page inspired by a previous mockup and developed using *AI*.
 
-### Requisitos
+---
 
-[Node.js](http://nodejs.org/) >= 20.x
+## ⚡ Features
 
-### Núcleo
+The project incorporates modern **utility-first CSS** functionality and advanced layout techniques to improve scalability, performance, and design adaptability.
 
-| Tecnología | Uso |
+#### Tailwind CSS: customization and abstraction
+- `@apply` → extracts and reuses Tailwind utilities inside custom CSS classes, reducing repetition and improving maintainability.
+- `@theme` → defines design tokens (colors, typography, spacing, etc.) to extend or centralize Tailwind's design system.
+
+#### Modern CSS conditionals and queries
+- `@container` → styles based on the container's size rather than the viewport.
+- `:is(), :where()` → refined selectors and advanced conditional logic in CSS.
+
+#### Modern viewport units
+- `cqw, cqh, ...` → units relative to container size (Container Query Units).
+
+#### Modern layout
+- `CSS Flex` → flexible one-dimensional layout system.
+- `CSS Grid` → two-dimensional layout system for complex structures.
+
+---
+
+## 🛠 Installation & Setup
+
+### a0. Prerequisites
+Make sure you have installed:
+- **[Node.js](http://nodejs.org/) 20.x** or higher
+
+Check the version:
+```bash
+node -v
+```
+
+### a1. Clone the repository
+```bash
+git clone https://github.com/marcturu/ac-materia-v2
+cd ac-materia-v2
+```
+
+### a2. Install dependencies
+```bash
+npm install
+```
+
+### a3. Run locally
+```bash
+npm run dev
+```
+The app will be available at **http://localhost:8123**, with live reload enabled.
+
+### b1. Try the website
+You can try the deployed version directly in the browser:
+
+- **Netlify (browser testing):**
+  WebApp: [https://ac-materia-v2.netlify.app/](https://ac-materia-v2.netlify.app/)
+
+> ℹ️ **Deployment details:**
+> The project is deployed on [Netlify](https://netlify.com) from the `main` branch.
+> - **Build command:** `npm run build`
+> - **Publish directory:** `dist`
+
+### c1. Watch the Demo
+🎥 **A [Recorded Demo](https://www.dropbox.com/scl/fi/velmi0p0wa07lldp886og/AC-Materia-v2-Demo.mkv?rlkey=g9biun1w67cp3vp9v706tt4b2&st=inxonzgp&dl=0) is also available**.
+
+---
+
+## 🧩 Methodology
+
+- **ITCSS**: style architecture (settings, tools, generic, elements, objects, components, utilities)
+- **OOCSS**: reusable object classes (`o-container`, `o-section`)
+- **BEM**: CSS class naming convention (only used when extracting classes with `@apply`)
+
+---
+
+## 🧰 Built With
+
+### Core
+
+| Technology | Purpose |
 | --- | --- |
-| [Parcel v2](https://parceljs.org) | Empaquetador - servidor de desarrollo, build de producción, pipeline de assets |
-| [Sass/SCSS](https://sass-lang.com) | Preprocesador CSS - variables, anidado, funciones, mixins, parciales (`@parcel/transformer-sass`) |
-| [PostCSS](https://postcss.org/) | Transpilación CSS - prefijos de proveedor y compatibilidad con navegadores antiguos (`@parcel/transformer-postcss`, `postcss-preset-env`) |
-| [PostHTML](https://github.com/posthtml/posthtml) | Parciales HTML mediante `posthtml-include` (`@parcel/transformer-posthtml`) |
+| [Parcel v2](https://parceljs.org) | Bundler — development server, production build, asset pipeline |
+| [Sass/SCSS](https://sass-lang.com) | CSS preprocessor — variables, nesting, functions, mixins, partials (`@parcel/transformer-sass`) |
+| [PostCSS](https://postcss.org/) | CSS transpilation — vendor prefixes and compatibility with older browsers (`@parcel/transformer-postcss`, `postcss-preset-env`) |
+| [PostHTML](https://github.com/posthtml/posthtml) | HTML partials via `posthtml-include` (`@parcel/transformer-posthtml`) |
 
-### Optimización (build de producción)
+### Optimization (production build)
 
-| Tecnología | Uso |
+| Technology | Purpose |
 | --- | --- |
-| [`lightningcss`](https://github.com/parcel-bundler/lightningcss) | Minificación y optimización de CSS (`@parcel/optimizer-css`) |
-| [`htmlnano`](https://github.com/posthtml/htmlnano) | Minificación de HTML (`@parcel/optimizer-htmlnano`) |
-| [SWC](https://swc.rs/) | Minificación de JavaScript (`@parcel/optimizer-swc`) |
-| [Babel](https://babeljs.io/) | Transpilación de JavaScript para navegadores antiguos (`@parcel/transformer-babel`) |
-| [`sharp`](https://sharp.pixelplumbing.com/) | Transformación de imágenes y conversión a WebP (`@parcel/transformer-image`) |
+| [`lightningcss`](https://github.com/parcel-bundler/lightningcss) | CSS minification and optimization (`@parcel/optimizer-css`) |
+| [`htmlnano`](https://github.com/posthtml/htmlnano) | HTML minification (`@parcel/optimizer-htmlnano`) |
+| [SWC](https://swc.rs/) | JavaScript minification (`@parcel/optimizer-swc`) |
+| [Babel](https://babeljs.io/) | JavaScript transpilation for older browsers (`@parcel/transformer-babel`) |
+| [`sharp`](https://sharp.pixelplumbing.com/) | Image transformation and WebP conversion (`@parcel/transformer-image`) |
 
-### Dependencias
+### Dependencies
 
-| Dependencia | Uso |
+| Dependency | Purpose |
 | --- | --- |
-| [Tailwind CSS](https://tailwindcss.com/) | Framework CSS utility-first `"tailwindcss": "^4.3.0"` |
-| [AOS](https://michalsnik.github.io/aos/) | Animaciones al hacer scroll `"aos": "^2.3.4"` |
-| [Font Awesome](https://fontawesome.com/) | Iconos `"@fortawesome/fontawesome-free": "^7.2.0"` |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS framework `"tailwindcss": "^4.3.0"` |
+| [AOS](https://michalsnik.github.io/aos/) | Scroll animations `"aos": "^2.3.4"` |
+| [Font Awesome](https://fontawesome.com/) | Icons `"@fortawesome/fontawesome-free": "^7.2.0"` |
 
-### Carcaterísticas
-El proyecto incorpora funcionalidades modernas de **CSS utility-first** y técnicas avanzadas de maquetación para mejorar la escalabilidad, el rendimiento y la adaptabilidad del diseño.
+---
 
-#### Tailwind CSS: personalización y abstracción
-- `@apply` → permite extraer y reutilizar utilidades de Tailwind dentro de clases CSS personalizadas, reduciendo repetición y mejorando la mantenibilidad.
-- `@theme` → define tokens de diseño (colores, tipografías, espaciados, etc.) para extender o centralizar el sistema de diseño de Tailwind.
-#### Condicionales y consultas CSS modernas
-- `@container` → estilos basados en el tamaño del contenedor, no del viewport.
-- `:is(), :where()` → refinamiento de selectores y lógica condicional avanzada en CSS.
-#### Unidades de viewport modernas
-- `cqw, cqh,...` → unidades relativas al tamaño del contenedor (Container Query Units).
-#### Layout moderno
-- `CSS Flex` → sistema de disposición unidimensional flexible.
-- `CSS Grid` → sistema de layout bidimensional para estructuras complejas.
+## 📜 Commands
 
-## Comandos
-
-| Comando | Descripción |
+| Command | Description |
 | --- | --- |
-| `npm run dev` | Inicia el servidor de desarrollo en http://localhost:8123 con recarga en vivo |
-| `npm run build` | Compila y optimiza los archivos para producción en `dist/` |
-| `npm run clean` | Elimina la carpeta `dist/` y las cachés |
+| `npm run dev` | Starts the development server at http://localhost:8123 with live reload |
+| `npm run build` | Compiles and optimizes the files for production into `dist/` |
+| `npm run clean` | Removes the `dist/` folder and caches |
 
-## Estructura del proyecto
+---
+
+## 📂 Project Structure
 
 ```
 src/
@@ -82,49 +148,41 @@ src/
 ├── blog.html
 ├── speakers.html
 ├── extra.html
-├── views/ 
-│   ├── partials/               # Parciales PostHTML
-│   │   ├── header.html          
+├── views/
+│   ├── partials/               # PostHTML partials
+│   │   ├── extra/
+│   │   ├── header.html
 │   │   └── footer.html
 │   ├── home/
 │   │   └── home.html
 │   ├── speakers/
 │   │   └── cards.html
 │   ├── blog/
-│   │   ├── hero.html    
-│   │   ├── intro.html  
-│   │   ├── list.html    
+│   │   ├── hero.html
+│   │   ├── intro.html
+│   │   ├── list.html
 │   │   └── final.html
 ├── assets/
-│   ├── fonts/                  # Fuentes autoalojadas (League Gothic, DM Sans)
-│   ├── images/                 # Imágenes optimizadas en WebP
+│   ├── fonts/                  # Self-hosted fonts (League Gothic, DM Sans)
+│   ├── images/                 # Optimized images in WebP
 │   ├── scripts/
 │   │   ├── main.js
-│   │   └── modules/            # Módulos JS (aos, header)
+│   │   └── modules/            # JS modules (aos, header)
 │   └── styles/
 │       ├── main.scss
 │       ├── extra.scss
 │       ├── _dependencies.scss
-│       ├── settings/           # Variables, fuentes, tailwind overrides (@theme)
-│       ├── tools/              # Funciones
+│       ├── settings/           # Variables, fonts, Tailwind overrides (@theme)
+│       ├── tools/              # Functions
 │       ├── generic/            # Reset
-│       ├── elements/           # Estilos base
-│       ├── objects/            # Objetos OOCSS
-│       ├── components/ 
-│       │   ├── blog/           
-│       │   ├── ui/             # Extracción de clases (@apply)     
-│       └── utilities/          # Clases de utilidad
+│       ├── elements/           # Base styles
+│       ├── objects/            # OOCSS objects
+│       ├── components/
+│       │   ├── blog/
+│       │   ├── ui/             # Class extraction (@apply)
+│       └── utilities/          # Utility classes
 ```
-
-## Despliegue
-
-El proyecto está desplegado en [Netlify](https://netlify.com) desde la rama `main`:
-https://uoc-ehtmlcss2-pec3-marctururoca.netlify.app/
-
-- **Comando de build:** `npm run build`
-- **Directorio de publicación:** `dist`
 
 ---
 
-Marc Turu Roca (https://github.com/marcturu/UOC-EHTMLCSS2-PEC3-MarcTuruRoca)  
-*UOC - PEC3 · Herramientas HTML y CSS II · 2025-2026*
+## 📷 Screenshots
