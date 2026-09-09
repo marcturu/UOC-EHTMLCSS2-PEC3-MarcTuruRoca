@@ -60,25 +60,36 @@ function toggleDropdown() {
 
 // Close the dropdown when a link is clicked
 function initDropdownAutoclose() {
-  const dropdownButton = document.getElementById('dropdownNavbarButton');
-  const menu = document.getElementById('dropdownNavbar');
+  const dropdownButton = document.getElementById('dropdownNavbarButton'); // Ponentes' link
+  const menu = document.getElementById('dropdownNavbar'); // Div with the speakers' links
+  const mobileMenu = document.getElementById('navbar-dropdown'); // Navbar with Inicio, Ponentes, etc. (the big one)
+  const mobileToggleBtn = document.querySelector('[data-collapse-toggle="navbar-dropdown"]'); // Hamburger button for the big mobile menu
   if (!dropdownButton || !menu) return;
 
-  // Close when clicking any link from the dropdown
-  document.querySelectorAll('#dropdownNavbar a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.add('hidden');
-    });
-  });
+  const closeMenu = () => menu.classList.add('hidden');
 
-  // Close when clicking outside the dropdown
+  const closeMobileMenu = () => {
+    mobileMenu?.classList.add('hidden');
+    mobileToggleBtn?.setAttribute('aria-expanded', 'false');
+  };
+
+  // Close the dropdown when clicking on any link inside it
+  menu.addEventListener('click', (e) => {
+    if (e.target.closest('a')) closeMenu();
+  }, { capture: true });
+
+  // Close the large mobile menu when clicking any link in the navigation
+  mobileMenu?.addEventListener('click', (e) => {
+    if (e.target.closest('a')) closeMobileMenu();
+  }, { capture: true });
+
   document.addEventListener('click', (e) => {
-    if (!menu.contains(e.target) && !dropdownButton.contains(e.target)) menu.classList.add('hidden');
+    if (!menu.contains(e.target) && !dropdownButton.contains(e.target)) closeMenu();
   });
 
-  // Close when the hash changes (#name1 -> #name2)
   window.addEventListener('hashchange', () => {
-    menu.classList.add('hidden');
+    closeMenu();
+    closeMobileMenu();
   });
 }
 
@@ -86,10 +97,10 @@ function initDropdownAutoclose() {
 function borderOnScroll() {
   const header = document.getElementById('header');
   if (!header) return;
-  
+
   const mq = window.matchMedia('(min-width: 768px)');
 
-  function updateBorder() { 
+  function updateBorder() {
     const isMobile = mq.matches;
     const hasScroll = window.scrollY > 0;
 
